@@ -7,3 +7,9 @@ extension Reactive where Base: UIProgressView {
 		return makeBindingTarget { $0.progress = $1 }
 	}
 }
+
+extension UIProgressView: DefaultBindingTargetProvider {
+	public var defaultBindingTarget: BindingTarget<Float> {
+		return reactive.progress
+	}
+}

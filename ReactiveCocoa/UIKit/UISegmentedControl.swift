@@ -14,3 +14,15 @@ extension Reactive where Base: UISegmentedControl {
 			.map { [unowned base = self.base] in base.selectedSegmentIndex }
 	}
 }
+
+extension UISegmentedControl: DefaultBindingSourceProvider {
+	public var defaultBindingSource: Signal<Int, NoError> {
+		return reactive.selectedSegmentIndexes
+	}
+}
+
+extension UISegmentedControl: DefaultBindingTargetProvider {
+	public var defaultBindingTarget: BindingTarget<Int> {
+		return reactive.selectedSegmentIndex
+	}
+}

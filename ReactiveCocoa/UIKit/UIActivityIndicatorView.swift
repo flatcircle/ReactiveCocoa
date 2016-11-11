@@ -7,3 +7,9 @@ extension Reactive where Base: UIActivityIndicatorView {
 		return makeBindingTarget { $1 ? $0.startAnimating() : $0.stopAnimating() }
 	}
 }
+
+extension UIActivityIndicatorView: DefaultBindingTargetProvider {
+	public var defaultBindingTarget: BindingTarget<Bool> {
+		return reactive.isAnimating
+	}
+}

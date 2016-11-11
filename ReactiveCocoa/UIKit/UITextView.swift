@@ -31,3 +31,15 @@ extension Reactive where Base: UITextView {
 		return textValues(forName: .UITextViewTextDidChange)
 	}
 }
+
+extension UITextView: DefaultBindingSourceProvider {
+	public var defaultBindingSource: Signal<String, NoError> {
+		return reactive.textValues
+	}
+}
+
+extension UITextView: DefaultBindingTargetProvider {
+	public var defaultBindingTarget: BindingTarget<String> {
+		return reactive.text
+	}
+}

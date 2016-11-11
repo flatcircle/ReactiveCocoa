@@ -130,6 +130,10 @@
 		9A9DFEE91DA7EFB60039EE1B /* AssociationSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A9DFEE81DA7EFB60039EE1B /* AssociationSpec.swift */; };
 		9A9DFEEA1DA7EFB60039EE1B /* AssociationSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A9DFEE81DA7EFB60039EE1B /* AssociationSpec.swift */; };
 		9A9DFEEB1DA7EFB60039EE1B /* AssociationSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A9DFEE81DA7EFB60039EE1B /* AssociationSpec.swift */; };
+		9ABEA1FD1DD54EFA008329A9 /* UnidirectionalBindings+DefaultProviders.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ABEA1FC1DD54EFA008329A9 /* UnidirectionalBindings+DefaultProviders.swift */; };
+		9ABEA1FE1DD54EFA008329A9 /* UnidirectionalBindings+DefaultProviders.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ABEA1FC1DD54EFA008329A9 /* UnidirectionalBindings+DefaultProviders.swift */; };
+		9ABEA1FF1DD54EFA008329A9 /* UnidirectionalBindings+DefaultProviders.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ABEA1FC1DD54EFA008329A9 /* UnidirectionalBindings+DefaultProviders.swift */; };
+		9ABEA2001DD54EFA008329A9 /* UnidirectionalBindings+DefaultProviders.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ABEA1FC1DD54EFA008329A9 /* UnidirectionalBindings+DefaultProviders.swift */; };
 		9AD0F06A1D48BA4800ADFAB7 /* NSObject+KeyValueObserving.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD0F0691D48BA4800ADFAB7 /* NSObject+KeyValueObserving.swift */; };
 		9AD0F06B1D48BA4800ADFAB7 /* NSObject+KeyValueObserving.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD0F0691D48BA4800ADFAB7 /* NSObject+KeyValueObserving.swift */; };
 		9AD0F06C1D48BA4800ADFAB7 /* NSObject+KeyValueObserving.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD0F0691D48BA4800ADFAB7 /* NSObject+KeyValueObserving.swift */; };
@@ -315,6 +319,7 @@
 		9A6AAA271DB8F7EB0013AAEA /* ReusableComponentsSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReusableComponentsSpec.swift; sourceTree = "<group>"; };
 		9A6AAA291DB8F7F10013AAEA /* ReusableComponentsSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReusableComponentsSpec.swift; sourceTree = "<group>"; };
 		9A9DFEE81DA7EFB60039EE1B /* AssociationSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssociationSpec.swift; sourceTree = "<group>"; };
+		9ABEA1FC1DD54EFA008329A9 /* UnidirectionalBindings+DefaultProviders.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UnidirectionalBindings+DefaultProviders.swift"; sourceTree = "<group>"; };
 		9AD0F0691D48BA4800ADFAB7 /* NSObject+KeyValueObserving.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSObject+KeyValueObserving.swift"; sourceTree = "<group>"; };
 		9ADE4A7B1DA44A9E005C2AC8 /* CocoaAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CocoaAction.swift; sourceTree = "<group>"; };
 		9ADE4A881DA6D206005C2AC8 /* NSControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSControl.swift; sourceTree = "<group>"; };
@@ -600,10 +605,9 @@
 		D04725EC19E49ED7006002AA /* ReactiveCocoa */ = {
 			isa = PBXGroup;
 			children = (
-				D04725EF19E49ED7006002AA /* ReactiveCocoa.h */,
-				9A1D06751D9415FB00ACF44C /* RACObjCRuntimeUtilities.h */,
-				9A1D06761D9415FB00ACF44C /* RACObjCRuntimeUtilities.m */,
+				9ABEA1FC1DD54EFA008329A9 /* UnidirectionalBindings+DefaultProviders.swift */,
 				9ADE4A7B1DA44A9E005C2AC8 /* CocoaAction.swift */,
+				9A2E425D1DAA6737006D909F /* CocoaTarget.swift */,
 				CD0C45DD1CC9A288009F5BF0 /* DynamicProperty.swift */,
 				9ADE4A901DA6EA40005C2AC8 /* NSObject+ReactiveExtensionsProvider.swift */,
 				9AD0F0691D48BA4800ADFAB7 /* NSObject+KeyValueObserving.swift */,
@@ -612,7 +616,9 @@
 				9AF0EA741D9A7FF700F27DDF /* NSObject+BindingTarget.swift */,
 				9A1D05DF1D93E99100ACF44C /* NSObject+Association.swift */,
 				9ADFE5A41DC0001C001E11F7 /* NSObject+Synchronizing.swift */,
-				9A2E425D1DAA6737006D909F /* CocoaTarget.swift */,
+				D04725EF19E49ED7006002AA /* ReactiveCocoa.h */,
+				9A1D06751D9415FB00ACF44C /* RACObjCRuntimeUtilities.h */,
+				9A1D06761D9415FB00ACF44C /* RACObjCRuntimeUtilities.m */,
 				9A1D05E91D93E9F100ACF44C /* AppKit */,
 				9A1D05EB1D93E9F100ACF44C /* UIKit */,
 				538DCB761DCA5E1600332880 /* Shared */,
@@ -1034,6 +1040,7 @@
 				538DCB7B1DCA5E6C00332880 /* NSLayoutConstraint.swift in Sources */,
 				9ADE4A941DA6EA40005C2AC8 /* NSObject+ReactiveExtensionsProvider.swift in Sources */,
 				9A1D05E31D93E99100ACF44C /* NSObject+Association.swift in Sources */,
+				9ABEA2001DD54EFA008329A9 /* UnidirectionalBindings+DefaultProviders.swift in Sources */,
 				419139491DB910570043C9D1 /* UIGestureRecognizer.swift in Sources */,
 				9A1D06161D93EA0100ACF44C /* UIControl.swift in Sources */,
 				9A1D06141D93EA0100ACF44C /* UIButton.swift in Sources */,
@@ -1090,6 +1097,7 @@
 				9A2E42601DAA6737006D909F /* CocoaTarget.swift in Sources */,
 				9A9DFEE51DA7B5500039EE1B /* NSObject+Intercepting.swift in Sources */,
 				9A1D06791D94160000ACF44C /* RACObjCRuntimeUtilities.m in Sources */,
+				9ABEA1FF1DD54EFA008329A9 /* UnidirectionalBindings+DefaultProviders.swift in Sources */,
 				9ADE4A931DA6EA40005C2AC8 /* NSObject+ReactiveExtensionsProvider.swift in Sources */,
 				9ADFE5A71DC0001C001E11F7 /* NSObject+Synchronizing.swift in Sources */,
 				9ADE4A7E1DA44A9E005C2AC8 /* CocoaAction.swift in Sources */,
@@ -1108,6 +1116,7 @@
 				4ABEFE2B1DCFD0030066A8C2 /* NSTableView.swift in Sources */,
 				CD0C45DE1CC9A288009F5BF0 /* DynamicProperty.swift in Sources */,
 				4ABEFE301DCFD0530066A8C2 /* NSCollectionView.swift in Sources */,
+				9ABEA1FD1DD54EFA008329A9 /* UnidirectionalBindings+DefaultProviders.swift in Sources */,
 				9A1D06771D9415FF00ACF44C /* RACObjCRuntimeUtilities.m in Sources */,
 				9AD0F06A1D48BA4800ADFAB7 /* NSObject+KeyValueObserving.swift in Sources */,
 				9A1D05E01D93E99100ACF44C /* NSObject+Association.swift in Sources */,
@@ -1150,6 +1159,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4ABEFE251DCFCF630066A8C2 /* UICollectionView.swift in Sources */,
+				9ABEA1FE1DD54EFA008329A9 /* UnidirectionalBindings+DefaultProviders.swift in Sources */,
 				9A1D06011D93EA0000ACF44C /* UIBarItem.swift in Sources */,
 				9A1D060D1D93EA0000ACF44C /* UITextField.swift in Sources */,
 				9A6AAA231DB8F51C0013AAEA /* ReusableComponents.swift in Sources */,

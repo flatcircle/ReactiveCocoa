@@ -23,3 +23,15 @@ extension Reactive where Base: NSTextField {
 			.map { ($0.object as! NSTextField).attributedStringValue }
 	}
 }
+
+extension NSTextField: DefaultBindingSourceProvider {
+	public var defaultBindingSource: Signal<String, NoError> {
+		return reactive.continuousStringValues
+	}
+}
+
+extension NSTextField: DefaultBindingTargetProvider {
+	public var defaultBindingTarget: BindingTarget<String> {
+		return reactive.stringValue
+	}
+}

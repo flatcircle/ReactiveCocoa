@@ -14,3 +14,15 @@ extension Reactive where Base: UIDatePicker {
 			.map { [unowned base = self.base] in base.date }
 	}
 }
+
+extension UIDatePicker: DefaultBindingSourceProvider {
+	public var defaultBindingSource: Signal<Date, NoError> {
+		return reactive.dates
+	}
+}
+
+extension UIDatePicker: DefaultBindingTargetProvider {
+	public var defaultBindingTarget: BindingTarget<Date> {
+		return reactive.date
+	}
+}

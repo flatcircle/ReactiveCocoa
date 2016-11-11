@@ -14,3 +14,15 @@ extension Reactive where Base: UISwitch {
 			.map { [unowned base = self.base] in base.isOn }
 	}
 }
+
+extension UISwitch: DefaultBindingSourceProvider {
+	public var defaultBindingSource: Signal<Bool, NoError> {
+		return reactive.isOnValues
+	}
+}
+
+extension UISwitch: DefaultBindingTargetProvider {
+	public var defaultBindingTarget: BindingTarget<Bool> {
+		return reactive.isOn
+	}
+}

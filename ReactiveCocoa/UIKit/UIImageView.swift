@@ -12,3 +12,9 @@ extension Reactive where Base: UIImageView {
 		return makeBindingTarget { $0.highlightedImage = $1 }
 	}
 }
+
+extension UIImageView: DefaultBindingTargetProvider {
+	public var defaultBindingTarget: BindingTarget<UIImage?> {
+		return reactive.image
+	}
+}
